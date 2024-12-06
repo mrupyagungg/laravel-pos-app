@@ -2,7 +2,7 @@
 <div class="iq-sidebar sidebar-default ">
     <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
         <a href="{{ route('dashboard') }}" class="header-logo">
-            <img src="{{ asset('assets/images/logo.png') }}" class="img-fluid rounded-normal light-logo" alt="logo"><h6 class="logo-title light-logo ml-3">AR-Rayyan POS</h6>
+            <img src="{{ asset('assets/images/arrayanlogo.png') }}" class="img-fluid rounded-normal light-logo" alt="logo"><h6 class="logo-title light-logo ml-3">AR-Rayyan POS</h6>
         </a>
         <div class="iq-menu-bt-sidebar ml-0">
             <i class="las la-bars wrapper-menu"></i>
@@ -95,6 +95,13 @@
                 </li>
                 @endif
 
+                <li class="{{ Request::is('coa*') ? 'active' : '' }}">
+                    <a href="" class="svg-icon">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="ml-3">Carts Of Account</span>
+                    </a>
+                </li>
+
                 <hr>
 
                 @if (auth()->user()->can('employee.menu'))
@@ -125,7 +132,7 @@
                 @endif
 
                 @if (auth()->user()->can('salary.menu'))
-                <li>
+                <!-- <li>
                     <a href="#advance-salary" class="collapsed" data-toggle="collapse" aria-expanded="false">
                     <i class="fa-solid fa-cash-register"></i>
                         <span class="ml-3">Salary</span>
@@ -156,14 +163,14 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 @endif
 
                 @if (auth()->user()->can('attendence.menu'))
-                <li>
+                <!-- <li>
                     <a href="#attendence" class="collapsed" data-toggle="collapse" aria-expanded="false">
                         <i class="fa-solid fa-calendar-days"></i>
-                        <span class="ml-3">Attendence</span>
+                        <span class="ml-3">Presensi</span>
                         <svg class="svg-icon iq-arrow-right arrow-active" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="10 15 15 20 20 15"></polyline><path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
                         </svg>
@@ -172,16 +179,16 @@
 
                         <li class="{{ Request::is(['employee/attendence']) ? 'active' : '' }}">
                             <a href="{{ route('attendence.index') }}">
-                                <i class="fa-solid fa-arrow-right"></i><span>All Attedence</span>
+                                <i class="fa-solid fa-arrow-right"></i><span>All Presensi</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('employee/attendence/*') ? 'active' : '' }}">
                             <a href="{{ route('attendence.create') }}">
-                                <i class="fa-solid fa-arrow-right"></i><span>Create Attendence</span>
+                                <i class="fa-solid fa-arrow-right"></i><span>Create Presensi</span>
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 @endif
 
                 <hr>

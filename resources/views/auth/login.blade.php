@@ -9,7 +9,8 @@
                     <div class="col-lg-7 align-self-center">
                         <div class="p-3">
 
-                            <h2 class="mb-2">Log In</h2>
+                            <center>                            <h2 class="mb-2">AR-RAYAN POS</h2></center>
+                            <h4 class="mb-2" style="color: green">Log In</h4>
                             <p>Login to stay connected.</p>
 
                             <form action="{{ route('login') }}" method="POST">
@@ -52,7 +53,7 @@
                     </div>
 
                     <div class="col-lg-5 content-right">
-                        <img src="{{ asset('assets/images/login/01.png') }}" class="img-fluid image-right" alt="">
+                        <img src="{{ asset('assets/images/arrayanlogo.png') }}" class="img-fluid image-right" alt="">
                     </div>
                 </div>
             </div>
